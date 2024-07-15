@@ -3,8 +3,10 @@ const currentPage = Astro.url.pathname;
 ---
 
 <!-- Bottom Navingation for mobile view -->
-<div class="hidden max-lg:btm-nav max-lg:bg-base-200">
-  <a href="/" class={`btm-nav-item ${currentPage === "/" ? "active" : ""}`}>
+<div
+  class=" hidden fixed bottom-0 left-0 right-0 z-50 max-lg:btm-nav max-lg:bg-base-200"
+>
+  <a href="/" class={`btm-nav-item ${currentPage === "/" ? "bg-purple-700 border-t-2" : ""}`}>
     <ion-icon name="home" class="text-xl"></ion-icon>
     <span class="btm-nav-label">Home</span>
   </a>
