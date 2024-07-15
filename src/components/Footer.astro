@@ -4,22 +4,25 @@ const currentPage = Astro.url.pathname;
 
 <!-- Bottom Navingation for mobile view -->
 <div
-  class=" hidden fixed bottom-0 left-0 right-0 z-50 max-lg:btm-nav max-lg:bg-base-200"
+  class="hidden fixed bottom-0 left-0 right-0 z-50 max-lg:btm-nav max-lg:bg-base-200"
 >
-  <a href="/" class={`btm-nav-item ${currentPage === "/" ? "bg-purple-700 border-t-2" : ""}`}>
+  <a
+    href="/"
+    class={`btm-nav-item ${currentPage === "/" ? "bg-purple-700 border-t-2" : ""}`}
+  >
     <ion-icon name="home" class="text-xl"></ion-icon>
     <span class="btm-nav-label">Home</span>
   </a>
   <a
     href="/projects"
-    class={`btm-nav-item ${currentPage === "/projects" ? "active" : ""}`}
+    class={`btm-nav-item ${currentPage === "/projects" ? "bg-purple-700 border-t-2" : ""}`}
   >
     <ion-icon name="briefcase" class="text-xl"></ion-icon>
     <span class="btm-nav-label">Projects</span>
   </a>
   <a
     href="/about"
-    class={`btm-nav-item ${currentPage === "/about" ? "active" : ""}`}
+    class={`btm-nav-item ${currentPage === "/about" ? "bg-purple-700 border-t-2" : ""}`}
   >
     <ion-icon name="globe" class="text-xl"></ion-icon>
     <span class="btm-nav-label">Socials</span>
@@ -29,25 +32,28 @@ const currentPage = Astro.url.pathname;
   class="footer container mx-auto w-full justify-center footer-center p-6 max-lg:hidden"
 >
   <nav class="flex flex-row space-x-2">
-    <a>
+    <a href="https://github.com/TigranBalayan10" target="_blank">
       <ion-icon
         name="logo-github"
         class="btn btn-link text-5xl text-primary hover:text-slate-200"
       ></ion-icon>
     </a>
-    <a>
+    <a
+      href="https://www.linkedin.com/in/tigran-balayan-33768a132/"
+      target="_blank"
+    >
       <ion-icon
         name="logo-linkedin"
         class="btn btn-link text-5xl text-primary hover:text-blue-700"
       ></ion-icon>
     </a>
-    <a>
+    <a href="https://www.x.com/tiko_102" target="_blank">
       <ion-icon
         name="logo-twitter"
         class="btn btn-link text-5xl text-primary hover:text-blue-500"
       ></ion-icon>
     </a>
-    <a>
+    <a href="https://www.facebook.com/tigran.balayan.1" target="_blank">
       <ion-icon
         name="logo-facebook"
         class="btn btn-link text-5xl text-primary hover:text-blue-600"
