@@ -1,19 +1,35 @@
 ---
 import { Image } from "astro:assets";
-import heroImage from "./image/hero-img.jpg";
+import heroImage from "./image/hero-img.png";
 ---
 
-<div class="hero min-h-screen">
+<div class="hero">
   <div class="hero-content flex-col lg:flex-row-reverse">
-    <Image src={heroImage} class="max-w-sm rounded-lg shadow-2xl" alt="Personal Photo"/>
-    <div>
-      <h1 class="text-5xl font-bold">Box Office News!</h1>
-      <p class="py-6">
-        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-        excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a
-        id nisi.
+    <div class="lg:w-1/2 lg:pl-8">
+      <Image
+        src={heroImage}
+        class="w-full max-w-sm lg:max-w-md rounded-lg shadow-2xl acse"
+        alt="Personal Photo"
+      />
+    </div>
+    <div class="lg:w-1/2">
+      <h1 class="text-4xl lg:text-5xl font-bold">Full Stack Web Developer</h1>
+      <p class="py-6 text-lg">
+        I'm a versatile full stack web developer with expertise in creating
+        dynamic and responsive web applications. From front-end design to
+        back-end functionality, I deliver seamless user experiences and robust
+        solutions. Explore my projects to see my proficiency in various web
+        technologies and frameworks. Learn more about my journey and significant
+        milestones in my biography timeline. Discover my professional experience
+        and download my resume in the career section. Let's collaborate and
+        bring your web ideas to life!
       </p>
-      <button class="btn btn-primary">Get Started</button>
+      <div
+        class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+      >
+        <a href="/projects" class="btn btn-primary">Explore Projects</a>
+        <a href="/biography" class="btn btn-secondary">Read Biography</a>
+      </div>
     </div>
   </div>
 </div>
