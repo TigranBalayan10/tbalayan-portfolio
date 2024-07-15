@@ -1,7 +1,7 @@
 <div class="navbar h-20 container mx-auto w-full justify-between text-gray-200">
-  <div class="navbar-start">
+  <div class="navbar-start lg:hidden">
     <div class="dropdown">
-      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost">
         <span class="material-icons-outlined text-3xl text-primary">
           menu
         </span>
@@ -17,17 +17,26 @@
         <li><a href="/contact">Contact</a></li>
       </ul>
     </div>
+  </div>
+  <div class="navbar-center lg:navbar-start">
     <a class="btn btn-ghost p-2">
       <img src="/tb-logo.png" alt="Tigran Logo" class="h-full" />
     </a>
   </div>
-  <div class="navbar-end hidden lg:flex">
-    <ul class="menu menu-horizontal px-1 font-light text-lg gap-4 lg:gap-6 xl:gap-8">
-      <li><a href="/">Home</a></li>
-      <li><a href="/projects">Projects</a></li>
-      <li><a href="/biography">Biography</a></li>
-      <li><a href="/career">Career</a></li>
-      <li><a href="/contact">Contact</a></li>
-    </ul>
+  <div class="navbar-end">
+    <div class="hidden lg:flex">
+      <ul class="menu menu-horizontal px-1 font-light text-lg gap-4 lg:gap-6 xl:gap-8">
+        <li><a href="/">Home</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/biography">Biography</a></li>
+        <li><a href="/career">Career</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+    <a href="/about" class="btn btn-ghost lg:hidden">
+      <span class="material-icons-outlined text-3xl text-primary">
+        info
+      </span>
+    </a>
   </div>
 </div>
