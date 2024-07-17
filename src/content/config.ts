@@ -9,6 +9,7 @@ const projectsCollection = defineCollection({
     hero: z.string(),
     icons: z.array(z.string()),
     link: z.string(),
+    github: z.string(),
   }),
 });
 

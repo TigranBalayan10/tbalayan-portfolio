@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@iconify-json/devicon": "^1.1.47",
+    "@iconify-json/logos": "^1.1.43",
     "@iconify-json/mdi": "^1.1.67",
     "@iconify/tailwind": "^1.1.1",
     "astro-icon": "^1.1.0",
