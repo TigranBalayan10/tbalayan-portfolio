@@ -1,0 +1,36 @@
+---
+import type { CollectionEntry } from "astro:content";
+interface Props {
+  timelineEvents: CollectionEntry<"biography">["data"]["timelineEvents"];
+}
+
+const { timelineEvents } = Astro.props;
+---
+
+<ul
+  class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical"
+>
+  {
+    timelineEvents.map((event, index) => (
+      <li class={index % 2 === 0 ? "timeline-left" : "timeline-right"}>
+        <div class="timeline-middle">
+          <ion-icon class="text-primary" name={event.icon} />
+        </div>
+        <div
+          class={`mb-10 ${index % 2 === 0 ? "timeline-start md:text-end" : "timeline-end"}`}
+        >
+          <div>
+            <time class="font-mono italic text-primary">{event.year}</time>
+          </div>
+          <div class="avatar">
+            <div class="w-32 rounded">
+              <img src={event.image} alt={event.title} />
+            </div>
+          </div>
+          <div class="text-lg font-black">{event.title}</div>
+          <p>{event.description}</p>
+        </div>
+      </li>
+    ))
+  }
+</ul>
