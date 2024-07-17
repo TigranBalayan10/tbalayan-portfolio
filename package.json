@@ -19,6 +19,8 @@
   },
   "devDependencies": {
     "@iconify-json/devicon": "^1.1.47",
+    "@iconify-json/logos": "^1.1.43",
+    "@iconify-json/vscode-icons": "^1.1.35",
     "@tailwindcss/typography": "^0.5.13",
     "astro-icon": "^1.1.0",
     "daisyui": "^4.12.10"
