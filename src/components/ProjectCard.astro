@@ -26,9 +26,9 @@ const { projects } = Astro.props;
       </figure>
       <div class="card-body">
         <h2 class="card-title">{project.data.title}</h2>
-        <p>{project.data.description}</p>
+        <p class="line-clamp-3">{project.data.description}</p>
         <div class="flex gap-2 justify-end">
-          {project.data.icons.map((icon) => (
+          {project.data.icons.map((icon: string) => (
             <Icon name={icon} class="text-2xl" />
           ))}
         </div>
