@@ -1,0 +1,53 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Icon } from "astro-icon/components";
+interface Props {
+  projects: CollectionEntry<"projects">[];
+}
+const { projects } = Astro.props;
+---
+
+{
+  projects.map((project) => (
+    <div class="card bg-base-300 w-96 shadow-xl">
+      <figure>
+        <div class="mockup-browser bg-base-300 rounded-none">
+          <div class="mockup-browser-toolbar">
+            <div class="input">{project.data.link}</div>
+          </div>
+          <div class="bg-base-200 flex justify-center">
+            <img
+              src={project.data.hero}
+              alt={project.data.title}
+              class="object-contain w-full h-full"
+            />
+          </div>
+        </div>
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">{project.data.title}</h2>
+        <p>{project.data.description}</p>
+        <div class="flex gap-2 justify-end">
+          {project.data.icons.map((icon) => (
+            <Icon name={`devicon:${icon}`} class="text-3xl" />
+          ))}
+        </div>
+        <div class="card-actions justify-end mt-2">
+          <a
+            href={project.data.link}
+            target="_blank"
+            class="btn btn-outline btn-primary"
+          >
+            Visit Website
+          </a>
+          <a
+            href={`/projects/${project.slug}`}
+            class="btn btn-outline btn-primary"
+          >
+            More Details
+          </a>
+        </div>
+      </div>
+    </div>
+  ))
+}
