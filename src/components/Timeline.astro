@@ -8,28 +8,29 @@ const { timelineEvents } = Astro.props;
 ---
 
 <ul
-  class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical"
+  class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical m-4"
 >
   {
     timelineEvents.map((event, index) => (
       <li class={index % 2 === 0 ? "timeline-left" : "timeline-right"}>
         <div class="timeline-middle">
-          <ion-icon class="text-primary" name={event.icon} />
+          <ion-icon class="text-primary text-xl" name={event.icon} />
         </div>
         <div
           class={`mb-10 ${index % 2 === 0 ? "timeline-start md:text-end" : "timeline-end"}`}
         >
-          <div>
+          <div class="mt-0.5">
             <time class="font-mono italic text-primary">{event.year}</time>
           </div>
           <div class="avatar">
-            <div class="w-32 rounded">
+            <div class="w-32 rounded mt-2">
               <img src={event.image} alt={event.title} />
             </div>
           </div>
           <div class="text-lg font-black">{event.title}</div>
           <p>{event.description}</p>
         </div>
+        <hr class="bg-secondary" />
       </li>
     ))
   }
