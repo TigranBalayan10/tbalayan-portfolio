@@ -14,10 +14,18 @@ const { skills } = Astro.props;
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {
         skills.map((skill) => (
-          <div class="mb-4">
-            <h3 class="text-lg font-semibold">{skill.name}</h3>
+          <div class="mb-4 w-64">
+            <div class="flex justify-between">
+              <div class="flex items-center">
+                <Icon name={skill.icon} class="text-xl" />
+                <h3 class="text-lg font-semibold ml-1">{skill.name}</h3>
+              </div>
+              <div class="tooltip" data-tip={skill.description}>
+                <ion-icon name="information-circle-outline" class="text-xl"></ion-icon>
+              </div>
+            </div>
             <progress
-              class="progress progress-primary w-56"
+              class="progress progress-primary"
               value={skill.value}
               max="100"
             />
