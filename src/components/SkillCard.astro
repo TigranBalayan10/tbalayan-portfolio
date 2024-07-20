@@ -1,0 +1,29 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Icon } from "astro-icon/components";
+interface Props {
+  skills: CollectionEntry<"skills">["data"]["skills"];
+}
+
+const { skills } = Astro.props;
+---
+
+<div class="card bg-base-300 shadow-xl max-lg:mx-4">
+  <div class="card-body">
+    <h2 class="card-title text-4xl font-bold">Skills</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {
+        skills.map((skill) => (
+          <div class="mb-4">
+            <h3 class="text-lg font-semibold">{skill.name}</h3>
+            <progress
+              class="progress progress-primary w-56"
+              value={skill.value}
+              max="100"
+            />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>

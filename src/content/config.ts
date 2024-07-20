@@ -30,7 +30,22 @@ const timelineCollection = defineCollection({
   }),
 });
 
+const skillsCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    skills: z.array(
+      z.object({
+        name: z.string(),
+        icon: z.string(),
+        description: z.string(),
+        value: z.number().min(0).max(100),
+      })
+    ),
+  }),
+});
+
 export const collections = {
   "projects": projectsCollection,
   "biography": timelineCollection,
+  "skills": skillsCollection,
 };

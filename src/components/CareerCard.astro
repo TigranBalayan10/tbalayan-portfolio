@@ -3,14 +3,14 @@ import { Image } from "astro:assets";
 import heroImage from "./image/hero-img.png";
 ---
 
-<div class="card lg:card-side bg-base-200 shadow-xl m-4 p-5">
-  <div class="flex flex-col justify-start px-8 pt-8">
+<div class="card lg:card-side bg-base-200 shadow-xl  max-lg:mx-4 p-2">
+  <div class="flex flex-col justify-start px-8  pt-8">
     <figure class="mb-4">
       <Image
         src={heroImage}
         alt="Movie"
-        class="w-full  h-auto object-cover max-lg:p-10"
-        width={200}
+        class="w-full  h-auto object-cover max-lg:p-10 rounded-lg shadow-2xl"
+        height={280}
       />
     </figure>
     <a href="#" class="btn btn-outline btn-primary w-full">Download CV</a>
