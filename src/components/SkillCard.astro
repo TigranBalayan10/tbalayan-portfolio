@@ -10,11 +10,11 @@ const { skills } = Astro.props;
 
 <div class="card bg-base-300 shadow-xl max-lg:mx-4 p-2">
   <div class="card-body">
-    <h2 class="card-title text-4xl font-bold">Skills</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <h2 class="card-title text-4xl font-bold mb-4">Skills</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
       {
         skills.map((skill) => (
-          <div class="mb-4 w-64">
+          <div class="mb-4 w-64 max-lg:w-full">
             <div class="flex justify-between">
               <div class="flex items-center">
                 <Icon name={skill.icon} class="text-xl" />

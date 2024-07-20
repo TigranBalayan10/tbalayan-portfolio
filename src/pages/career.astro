@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import CareerCard from "../components/CareerCard.astro";
 import SkillCard from "../components/SkillCard.astro";
+import ExperienceCard from "../components/ExperienceCard.astro";
 import { getCollection } from "astro:content";
 
 const skillSet = await getCollection("career");
@@ -14,5 +15,6 @@ const skills = skillSet.flatMap((entry) => entry.data.skills);
   <div class="container mx-auto m-8 space-y-4 max-lg:mb-24">
     <CareerCard />
     <SkillCard skills={skills} />
+    <ExperienceCard />
   </div>
 </Layout>
