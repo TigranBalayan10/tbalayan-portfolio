@@ -1,0 +1,56 @@
+{
+    "experience": [
+        {
+            "jobTitle": "Full Stack Developer",
+            "companyName": "Freelance",
+            "date": "January 2024 - Present",
+            "icon": "tb-logo",
+            "description": [
+                "Incorporated third-party APIs into web applications for data exchange and real-time updates, enhancing functionality and user experience",
+                "Developed single-page web applications in React, incorporating responsive design principles and ensuring cross-browser compatibility",
+                "Created 3 full-stack web applications in the last 6 months, showcasing proficiency in both front-end and back-end technologies",
+                "Optimized database queries and implemented caching strategies, resulting in a 40% improvement in application performance",
+                "Collaborated with clients to gather requirements, provide regular progress updates, and ensure project alignment with business objectives",
+                "Implemented SEO best practices and web accessibility standards (WCAG 2.1) across all developed sites, improving search engine rankings and user inclusivity"
+            ]
+        },
+        {
+            "jobTitle": "Full Stack Developer",
+            "companyName": "Precise Computer Solutions, LLC",
+            "date": "June 2021 - December 2023",
+            "icon": "Computer-logo",
+            "description": [
+                "Utilized a microservices architecture to separate the application into independent components, improving scalability and reliability",
+                "Collaborated with other developers to ensure code consistency and adherence to best practices",
+                "Developed and maintained specific modules within a large-scale enterprise application, focusing on user authentication and data visualization components",
+                "Participated in code reviews, providing constructive feedback to team members and incorporating suggestions to improve code quality",
+                "Implemented unit tests for components, contributing to the overall test coverage and stability of the application",
+                "Assisted in troubleshooting and resolving bugs reported by users, improving the overall user experience and application reliability"
+            ]
+        },
+        {
+            "jobTitle": "Business Owner",
+            "companyName": "Beverly Motors LLC",
+            "date": "April 2017 - June 2022",
+            "icon": "bm-limo",
+            "description": [
+                "Led end-to-end development of company website, improving online visibility and customer engagement",
+                "Implemented CRM system, increasing customer retention by 25% through improved data management",
+                "Developed and maintained fleet management software, optimizing logistics operations",
+                "Created mobile-responsive booking platform, resulting in 30% growth in online reservations"
+            ]
+        },
+        {
+            "jobTitle": "Pre-Press Operation Manager",
+            "companyName": "GotPrint",
+            "date": "June 2014 - March 2017",
+            "icon": "got-print",
+            "description": [
+                "Managed high-volume production operations, optimizing workflows for efficiency",
+                "Troubleshot technical issues, demonstrating strong problem-solving skills",
+                "Implemented process improvements, showcasing analytical thinking",
+                "Coordinated cross-functional teams to meet tight deadlines"
+            ]
+        }
+    ]
+}
