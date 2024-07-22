@@ -6,3 +6,10 @@ body {
   background: radial-gradient(circle closest-side at center, #3c0764, #110016);
   font-family: "Quicksand", sans-serif;
 }
+
+.bg-base-200 {
+  background-image: linear-gradient(to bottom right, rgb(43, 3, 104), rgb(13, 0, 33)) !important;
+}
+.bg-base-300 {
+  background-image: linear-gradient(to top left, rgb(45, 17, 90), rgb(13, 0, 33)) !important;
+}
