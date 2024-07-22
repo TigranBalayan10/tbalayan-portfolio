@@ -7,7 +7,7 @@ const { experience } = experienceData;
   <div class="card-body">
     <h2 class="card-title text-4xl font-bold mb-5">Work Experience</h2>
     {
-      experience.map((exp) => (
+      experience.map((exp, index) => (
         <>
           <div class="flex items-center gap-x-3">
             <div class="avatar max-lg:hidden">
@@ -28,7 +28,7 @@ const { experience } = experienceData;
             ))}
           </ul>
         </article>
-          <div class="divider" />
+          {index < experience.length - 1 && <div class="divider" />}
         </>
       ))
     }

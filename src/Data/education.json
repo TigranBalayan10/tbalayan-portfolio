@@ -1,0 +1,18 @@
+{
+    "education": [
+        {
+            "major": "Bachelor of Science Metallurgy and Material Science Engineering",
+            "schoolName": "State Engineering University of Armenia",
+            "date": "September 2001 - June 2008",
+            "icon": "SEUA-logo",
+            "description": "Graduated with a strong foundation in analytical thinking and problem-solving. Leveraged engineering principles to transition into full-stack development, applying systematic approaches to software architecture and efficient coding practices."
+        },
+        {
+            "major": "Full Stack Web Development Bootcamp",
+            "schoolName": "UCLA Extension",
+            "date": "December 2022 - June 2023",
+            "icon": "UCLA",
+            "description": "Completed an intensive bootcamp focused on modern web development technologies. Gained hands-on experience with React, Node.js, Express, and MongoDB, developing full-stack applications from scratch. Collaborated with a diverse group of peers to build projects and enhance coding skills."
+        }
+    ]
+}

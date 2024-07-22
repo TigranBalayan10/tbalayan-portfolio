@@ -1,0 +1,34 @@
+---
+import educationData from '../Data/education.json'
+const { education } = educationData
+---
+
+<div class="card bg-base-200 shadow-xl mx-24 max-lg:mx-4 p-2">
+  <div class="card-body">
+    <h2 class="card-title text-4xl font-bold mb-5">Work Experience</h2>
+    {
+      education.map((exp, index) => (
+        <>
+          <div class="flex items-center gap-x-3">
+            <div class="avatar max-lg:hidden">
+              <div class="w-20 h-20 rounded-xl">
+                <img src={`/logos/${exp.icon}.png`} alt={exp.schoolName} />
+              </div>
+            </div>
+            <div>
+              <h1 class="text-2xl font-bold">{exp.major}</h1>
+              <p class="text-lg">{exp.schoolName}</p>
+              <p class="text-lg">{exp.date}</p>
+            </div>
+          </div>
+          <article class="prose text-xl max-lg:text-base max-w-5xl">
+          <p>
+            {exp.description}
+          </p>
+        </article>
+            {index < education.length - 1 && <div class="divider" />}
+        </>
+      ))
+    }
+  </div>
+</div>
