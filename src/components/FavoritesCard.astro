@@ -55,5 +55,28 @@ const { books, movies, hobbies } = favoritesData;
         ))
       }
     </div>
+    <div class="divider"></div>
+    <h3 class="text-2xl font-semibold mb-2">Hobbies</h3>
+    <div
+    class="grid grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center"
+  >
+    {
+      hobbies.map((hobbie) => (
+        <div class="mb-4 w-64 max-lg:w-full">
+          <div class="flex flex-col items-center">
+              <img
+                src={`/hobbies/${hobbie.img}`}
+                alt={hobbie.name}
+                width="600"
+                height="600"
+                class="rounded-lg shadow-lg"
+              />
+            <h3 class="text-lg font-semibold mt-2">{hobbie.name}</h3>
+            <p class="text-sm font-semibold text-center">{hobbie.description}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
   </div>
 </div>
