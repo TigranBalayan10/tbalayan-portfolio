@@ -6,12 +6,23 @@ interface Props {
 }
 
 const { skills } = Astro.props;
+const flags = [
+  { name: "Armenian", icon: "armenia", value: "100" },
+  { name: "English", icon: "uk", value: "100" },
+  { name: "Russian", icon: "russia", value: "100" },
+  { name: "Italian", icon: "italy", value: "40" },
+];
 ---
 
 <div class="card bg-base-300 shadow-xl mx-24 max-lg:mx-4 p-2">
   <div class="card-body">
-    <h2 class="card-title text-4xl font-bold mb-4">Skills</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
+    <h2 class="card-title text-4xl font-bold">Skills</h2>
+    <p class="text-lg font-semibold mb-4">
+      Here are some of the skills I have acquired over the years.
+    </p>
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center"
+    >
       {
         skills.map((skill) => (
           <div class="mb-4 w-64 max-lg:w-full">
@@ -20,13 +31,42 @@ const { skills } = Astro.props;
                 <Icon name={skill.icon} class="text-2xl" />
                 <h3 class="text-lg font-semibold ml-1">{skill.name}</h3>
               </div>
-              <div class="lg:tooltip hidden lg:tooltip-info" data-tip={skill.description}>
-                <ion-icon name="information-circle-outline" class="text-xl"></ion-icon>
+              <div
+                class="lg:tooltip hidden lg:tooltip-info"
+                data-tip={skill.description}
+              >
+                <ion-icon name="information-circle-outline" class="text-xl" />
               </div>
             </div>
             <progress
               class="progress progress-primary"
               value={skill.value}
+              max="100"
+            />
+          </div>
+        ))
+      }
+    </div>
+    <p class="text-lg font-semibold mb-4">I Speak</p>
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center"
+    >
+      {
+        flags.map((flag) => (
+          <div class="mb-4 w-64 max-lg:w-full">
+            <div class="flex justify-between">
+              <div class="flex items-center">
+                <img
+                  src={`/flags/${flag.icon}.svg`}
+                  alt={flag.name}
+                  class="w-6 h-6"
+                />
+                <h3 class="text-lg font-semibold ml-2">{flag.name}</h3>
+              </div>
+            </div>
+            <progress
+              class="progress progress-primary"
+              value={flag.value}
               max="100"
             />
           </div>

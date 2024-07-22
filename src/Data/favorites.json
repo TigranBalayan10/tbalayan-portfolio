@@ -1,0 +1,76 @@
+{
+    "books": [
+        {
+            "title": "Crime and Punishment",
+            "author": "Fyodor Dostoevsky",
+            "img": "crime_and_punishment.png",
+            "link": "https://www.amazon.com/Crime-Punishment-Fyodor-Dostoyevsky/dp/0486415872"
+        },
+        {
+            "title": "The Godfather",
+            "author": "Mario Puzo",
+            "img": "the_godfather_book.png",
+            "link": "https://www.amazon.com/Godfather-Mario-Puzo/dp/0451205766"
+        },
+        {
+            "title": "1984",
+            "author": "George Orwell",
+            "img": "1984.png",
+            "link": "https://www.amazon.com/1984-George-Orwell/dp/0451524934"
+        },
+        {
+            "title": "Metro 2033",
+            "author": "Dmitry Glukhovsky",
+            "img": "metro_2033.png",
+            "link": "https://www.amazon.com/Metro-2033-Dmitry-Glukhovsky/dp/1539930721"
+        }
+    ],
+    "movies": [
+        {
+            "title": "The Jackal",
+            "director": "Michael Caton-Jones",
+            "img": "the_jackal.png",
+            "link": "https://www.imdb.com/title/tt0119395/"
+        },
+        {
+            "title": "The Godfather",
+            "director": "Francis Ford Coppola",
+            "img": "the_godfather_movie.png",
+            "link": "https://www.imdb.com/title/tt0068646/"
+        },
+        {
+            "title": "The Dark Knight",
+            "director": "Christopher Nolan",
+            "img": "the_dark_knight.png",
+            "link": "https://www.imdb.com/title/tt0468569/"
+        },
+        {
+            "title": "Matrix",
+            "director": "Brothers Wachowski",
+            "img": "matrix.png",
+            "link": "https://www.imdb.com/title/tt0133093/"
+        }
+    ],
+    "hobbies": [
+        {
+            "name": "Football(soccer)",
+            "description": "Playing and watching football matches",
+            "img": "football.png"
+        },
+        {
+            "name": "Cooking",
+            "description": "Exploring new recipes and experimenting with flavors",
+            "img": "cooking.png"
+        },
+        {
+            "name": "Gaming",
+            "description": "Immersing in virtual worlds and completing challenging quests",
+            "img": "gaming.png"
+        },
+        {
+            "name": "Driving Cars",
+            "description": "Exploring scenic routes and enjoying the thrill of speed",
+            "img": "driving.png"
+        }
+    ]
+}
