@@ -1,13 +1,60 @@
 ---
 import "../styles/global.css";
-interface Props {
-  title: string;
-}
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import { ViewTransitions } from "astro:transitions";
+import { getImage } from "astro:assets";
+import ogImage from "../images/og-image.png";
 
-const { title } = Astro.props;
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  type?: string;
+  canonicalURL?: string | URL;
+}
+
+const {
+  title = "Tigran Balayan - Software Engineer Portfolio",
+  description = "Explore Tigran Balayan's professional journey in software engineering. Discover projects, skills, and experiences that showcase expertise in web development and technology.",
+  image = ogImage,
+  type = "website",
+  canonicalURL,
+} = Astro.props;
+
+const currentPath = new URL(Astro.request.url).pathname;
+const resolvedCanonicalURL = canonicalURL
+  ? typeof canonicalURL === "string"
+    ? canonicalURL
+    : canonicalURL.toString()
+  : Astro.site
+    ? new URL(Astro.url.pathname, Astro.site).toString()
+    : Astro.url.href;
+
+const optimizedOgImage = await getImage({
+  src: image,
+  width: 1200,
+  height: 630,
+});
+
+// Add page-specific metadata
+const pageMetadata = {
+  "/projects": {
+    title: "Tigran Balayan's Projects",
+    description:
+      "Explore a collection of innovative projects developed by Tigran Balayan, showcasing expertise in various technologies and problem-solving skills.",
+  },
+  "/biography": {
+    title: "Tigran Balayan - Biography",
+    description:
+      "Learn about Tigran Balayan's background, education, and professional journey in software engineering and technology.",
+  },
+  "/career": {
+    title: "Tigran Balayan's Career",
+    description:
+      "Discover Tigran Balayan's career path, professional achievements, and expertise in software development and engineering.",
+  },
+};
 ---
 
 <!doctype html>
@@ -36,7 +83,40 @@ const { title } = Astro.props;
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <meta name="generator" content={Astro.generator} />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={resolvedCanonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={optimizedOgImage.src} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={resolvedCanonicalURL} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={optimizedOgImage.src} />
+    <!-- Canonical URL -->
+    <link rel="canonical" href={resolvedCanonicalURL} />
     <title>{title}</title>
+     <!-- Structured Data -->
+     <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Tigran Balayan",
+        "jobTitle": "Software Engineer",
+        "description": description,
+        "url": resolvedCanonicalURL,
+        "image": optimizedOgImage.src,
+        "sameAs": [
+          "https://github.com/tigranbalayan",
+          "https://www.linkedin.com/in/tigranbalayan",
+          "https://twitter.com/tigranbalayan"
+        ]
+      })}
+    </script>
   </head>
   <body class="min-h-screen flex flex-col">
     <Navigation />
