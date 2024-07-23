@@ -28,7 +28,11 @@ const { timelineEvents } = Astro.props;
             </div>
           </div>
           <div class="text-lg font-black text-primary">{event.title}</div>
-          <p>{event.description}</p>
+          <div class={index % 2 === 0 ? "chat chat-end" : "chat chat-start"}>
+            <div class="chat-bubble bg-slate-600">
+              <p>{event.description}</p>
+            </div>
+          </div>
         </div>
         <hr class="bg-secondary" />
       </li>
