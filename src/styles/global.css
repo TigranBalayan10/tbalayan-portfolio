@@ -1,6 +1,6 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 body {
   background: radial-gradient(circle closest-side at center, #3c0764, #110016);
@@ -8,8 +8,16 @@ body {
 }
 
 .bg-base-200 {
-  background-image: linear-gradient(to bottom right, rgb(43, 3, 104), rgb(13, 0, 33)) !important;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(13, 0, 33),
+    rgb(73, 16, 158)
+  ) !important;
 }
 .bg-base-300 {
-  background-image: linear-gradient(to top left, rgb(45, 17, 90), rgb(13, 0, 33)) !important;
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgb(143, 9, 158) 0%,
+    rgba(24, 22, 39, 1) 90%
+  ) !important;
 }

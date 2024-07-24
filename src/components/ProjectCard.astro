@@ -9,7 +9,7 @@ const { projects } = Astro.props;
 
 {
   projects.map((project) => (
-    <div class="card bg-base-300 max-lg:w-96 shadow-xl">
+    <div class="card bg-base-200 max-lg:w-96 shadow-xl">
       <figure>
         <div class="mockup-browser bg-base-300 rounded-none">
           <div class="mockup-browser-toolbar">
@@ -38,20 +38,20 @@ const { projects } = Astro.props;
             target="_blank"
             class="btn btn-outline btn-primary"
           >
-            Visit Website
+            Website
           </a>
           <a
             href={`/projects/${project.slug}`}
             class="btn btn-outline btn-primary"
           >
-            More Details
+            Details
           </a>
           <a
             href={project.data.github}
             target="_blank"
             class="btn btn-outline btn-primary"
           >
-            <Icon name="devicon:github" class="text-xl" />
+            <ion-icon name="logo-github" class="text-3xl"></ion-icon>
           </a>
         </div>
         <h1 class="text-end text-sm mt-2 italic">Created: {project.data.pubDate}</h1>
