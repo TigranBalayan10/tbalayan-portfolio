@@ -1,0 +1,17 @@
+{
+    "icons": [
+        "react",
+        "devicon-plain:nextjs",
+        "devicon-plain:typescript",
+        "devicon-plain:javascript",
+        "devicon-plain:nodejs",
+        "devicon-plain:express",
+        "devicon-plain:graphql",
+        "devicon-plain:apollo",
+        "devicon-plain:postgresql",
+        "devicon-plain:mongodb",
+        "devicon-plain:git",
+        "devicon-plain:vercel",
+        "devicon-plain:vscode"
+    ]
+}

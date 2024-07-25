@@ -1,0 +1,31 @@
+---
+import { Icon } from "astro-icon/components";
+
+const icons = [
+  "skill-icons:javascript",
+  "skill-icons:typescript",
+  "skill-icons:html",
+  "skill-icons:react-light",
+  "skill-icons:nextjs-light",
+  "skill-icons:nodejs-light",
+  "skill-icons:expressjs-light",
+  "skill-icons:postgresql-light",
+  "skill-icons:mongodb",
+  "skill-icons:github-light",
+  "skill-icons:astro",
+  "skill-icons:tailwindcss-light",
+  "skill-icons:graphql-light",
+  "skill-icons:mysql-light"
+];
+---
+
+<div class="container">
+  <h1 class="text-4xl text-center mb-5 font-bold">Tech Stack I work with</h1>
+  <div class="flex flex-wrap justify-center gap-4 mx-4">
+    {
+      icons.map((icon) => (
+        <Icon name={icon} class="w-14 h-14 max-lg:w-10 max-lg:h-10" aria-label={icon} />
+      ))
+    }
+  </div>
+</div>
