@@ -6,7 +6,7 @@ import { $ as $$Image } from '../chunks/_astro_assets_iniJxosI.mjs';
 import { h as heroImage } from '../chunks/hero-img_DQTheGGp.mjs';
 import { $ as $$Icon } from '../chunks/Icon_BEMwHVqH.mjs';
 import 'clsx';
-import { g as getCollection } from '../chunks/_astro_content_QJQ82sHc.mjs';
+import { g as getCollection } from '../chunks/_astro_content_BRCH8A8C.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$CareerCard = createComponent(($$result, $$props, $$slots) => {

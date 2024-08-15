@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 
+// This function will run at build time for static generation
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
   return projects.map(entry => ({
@@ -10,7 +11,15 @@ export async function getStaticPaths() {
   }));
 }
 
-const { entry } = Astro.props;
+// This part will run for both SSR and static generation
+const { slug } = Astro.params;
+const projects = await getCollection("projects");
+const entry = projects.find(project => project.slug === slug);
+
+if (!entry) {
+  return Astro.redirect("/404"); // Redirect to 404 page if project not found
+}
+
 const { Content } = await entry.render();
 ---
 

@@ -1,7 +1,7 @@
 /* empty css                                        */
 import { a as createComponent, r as renderTemplate, b as renderComponent, d as createAstro, m as maybeRenderHead } from '../../chunks/astro/server_DPK4Zyq3.mjs';
 import 'kleur/colors';
-import { g as getCollection } from '../../chunks/_astro_content_QJQ82sHc.mjs';
+import { g as getCollection } from '../../chunks/_astro_content_BRCH8A8C.mjs';
 import { $ as $$Layout } from '../../chunks/Layout_Co-kQNyo.mjs';
 export { renderers } from '../../renderers.mjs';
 
@@ -16,7 +16,12 @@ async function getStaticPaths() {
 const $$slug = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$slug;
-  const { entry } = Astro2.props;
+  const { slug } = Astro2.params;
+  const projects = await getCollection("projects");
+  const entry = projects.find((project) => project.slug === slug);
+  if (!entry) {
+    return Astro2.redirect("/404");
+  }
   const { Content } = await entry.render();
   return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": entry.data.title }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<div class="prose prose-lg overflow-visible p-14 mx-auto max-w-6xl mb-16"> ${renderComponent($$result2, "Content", Content, {})} </div> ` })}`;
 }, "C:/Users/tigra/Documents/My Projects/tbalayan-portfolio/src/pages/projects/[slug].astro", void 0);
