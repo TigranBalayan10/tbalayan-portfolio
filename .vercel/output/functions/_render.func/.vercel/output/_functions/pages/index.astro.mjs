@@ -1,10 +1,10 @@
 /* empty css                                     */
-import { a as createComponent, r as renderTemplate, m as maybeRenderHead, b as renderComponent } from '../chunks/astro/server_DbFupAXm.mjs';
+import { a as createComponent, r as renderTemplate, m as maybeRenderHead, b as renderComponent } from '../chunks/astro/server_DPK4Zyq3.mjs';
 import 'kleur/colors';
-import { $ as $$Layout } from '../chunks/Layout_D9h5l57-.mjs';
-import { $ as $$Image } from '../chunks/_astro_assets_C20IXeGa.mjs';
+import { $ as $$Layout } from '../chunks/Layout_Co-kQNyo.mjs';
+import { $ as $$Image } from '../chunks/_astro_assets_iniJxosI.mjs';
 import { h as heroImage } from '../chunks/hero-img_DQTheGGp.mjs';
-import { $ as $$Icon } from '../chunks/Icon_DEfc42Vh.mjs';
+import { $ as $$Icon } from '../chunks/Icon_BEMwHVqH.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Hero = createComponent(($$result, $$props, $$slots) => {

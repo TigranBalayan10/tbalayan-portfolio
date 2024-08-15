@@ -1,8 +1,8 @@
-import { a as createComponent, r as renderTemplate, m as maybeRenderHead, b as renderComponent, f as addAttribute, d as createAstro, k as renderSlot, l as renderTransition, n as renderHead } from './astro/server_DbFupAXm.mjs';
+import { a as createComponent, r as renderTemplate, m as maybeRenderHead, b as renderComponent, f as addAttribute, d as createAstro, k as renderSlot, l as renderTransition, n as renderHead } from './astro/server_DPK4Zyq3.mjs';
 import 'kleur/colors';
 /* empty css                             */
 import 'clsx';
-import { a as getImage } from './_astro_assets_C20IXeGa.mjs';
+import { a as getImage } from './_astro_assets_iniJxosI.mjs';
 
 const $$Navigation = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<div class="fixed top-0 left-0 right-0 z-50 bg-base-200"> <div class="navbar container mx-auto w-full justify-between text-gray-200"> <div class="navbar-start lg:hidden"> <div class="dropdown"> <div tabindex="0" role="button" class="btn btn-ghost"> ${renderComponent($$result, "ion-icon", "ion-icon", { "name": "menu", "class": "text-3xl text-primary" })} </div> <ul tabindex="0" class="menu menu-lg dropdown-content bg-base-300 rounded-box mt-4 w-64 z-[1] p-2 shadow text-gray-300"> <li><a href="/">${renderComponent($$result, "ion-icon", "ion-icon", { "name": "home" })}Home</a></li> <li><a href="/projects">${renderComponent($$result, "ion-icon", "ion-icon", { "name": "briefcase" })}Projects</a></li> <li><a href="/career">${renderComponent($$result, "ion-icon", "ion-icon", { "name": "person" })}Career</a></li> <li><a href="/biography">${renderComponent($$result, "ion-icon", "ion-icon", { "name": "book" })}About</a></li> </ul> </div> </div> <div class="navbar-center lg:navbar-start"> <a class="btn btn-ghost p-2" href="/"> <img src="/tb-logo.png" alt="Tigran Logo" class="h-full"> </a> </div> <div class="navbar-end"> <div class="hidden lg:flex"> <ul class="menu menu-horizontal px-1 font-light text-lg gap-4 lg:gap-6 xl:gap-8"> <li><a href="/">

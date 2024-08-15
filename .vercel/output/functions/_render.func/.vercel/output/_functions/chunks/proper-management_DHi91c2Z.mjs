@@ -1,5 +1,5 @@
 async function getMod() {
-						return import('./assure-guard_D12v4OJr.mjs');
+						return import('./proper-management_8JLzCA63.mjs');
 					}
 					const collectedLinks = [];
 					const collectedStyles = [];

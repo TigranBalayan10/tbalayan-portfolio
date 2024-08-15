@@ -1,7 +1,7 @@
 import { Traverse } from 'neotraverse/modern';
 import pLimit from 'p-limit';
-import { r as removeBase, i as isRemotePath, V as VALID_INPUT_FORMATS, A as AstroError, G as GetEntryDeprecationError, U as UnknownContentCollectionError, p as prependForwardSlash } from './astro/assets-service_C7EUesmq.mjs';
-import { a as createComponent, h as renderUniqueStylesheet, i as renderScriptElement, j as createHeadAndContent, r as renderTemplate, b as renderComponent, u as unescapeHTML } from './astro/server_DbFupAXm.mjs';
+import { r as removeBase, i as isRemotePath, V as VALID_INPUT_FORMATS, A as AstroError, U as UnknownContentCollectionError, p as prependForwardSlash } from './astro/assets-service_V6XCgpI1.mjs';
+import { a as createComponent, h as renderUniqueStylesheet, i as renderScriptElement, j as createHeadAndContent, r as renderTemplate, b as renderComponent, u as unescapeHTML } from './astro/server_DPK4Zyq3.mjs';
 import 'kleur/colors';
 import * as devalue from 'devalue';
 
@@ -186,42 +186,6 @@ function createGetCollection({
     }
   };
 }
-function createGetEntryBySlug({
-  getEntryImport,
-  getRenderEntryImport,
-  collectionNames
-}) {
-  return async function getEntryBySlug(collection, slug) {
-    const store = await globalDataStore.get();
-    if (!collectionNames.has(collection)) {
-      if (store.hasCollection(collection)) {
-        throw new AstroError({
-          ...GetEntryDeprecationError,
-          message: GetEntryDeprecationError.message(collection, "getEntryBySlug")
-        });
-      }
-      console.warn(`The collection ${JSON.stringify(collection)} does not exist.`);
-      return void 0;
-    }
-    const entryImport = await getEntryImport(collection, slug);
-    if (typeof entryImport !== "function") return void 0;
-    const entry = await entryImport();
-    return {
-      id: entry.id,
-      slug: entry.slug,
-      body: entry.body,
-      collection: entry.collection,
-      data: entry.data,
-      async render() {
-        return render({
-          collection: entry.collection,
-          id: entry.id,
-          renderEntryImport: await getRenderEntryImport(collection, slug)
-        });
-      }
-    };
-  };
-}
 function updateImageReferencesInData(data, fileName, imageAssetMap) {
   return new Traverse(data).map(function(ctx, val) {
     if (typeof val === "string" && val.startsWith(IMAGE_IMPORT_PREFIX)) {
@@ -340,9 +304,9 @@ createCollectionToGlobResultMap({
 });
 
 let lookupMap = {};
-lookupMap = {"biography":{"type":"content","entries":{"bio-events":"/src/content/biography/bio-events.mdx"}},"career":{"type":"content","entries":{"skills":"/src/content/career/skills.mdx"}},"projects":{"type":"content","entries":{"assure-guard":"/src/content/projects/assure-guard.mdx","bm-limo":"/src/content/projects/bm-limo.mdx","proper-management":"/src/content/projects/proper-management.mdx","m-fest":"/src/content/projects/m-fest.mdx"}}};
+lookupMap = {"career":{"type":"content","entries":{"skills":"/src/content/career/skills.mdx"}},"projects":{"type":"content","entries":{"assure-guard":"/src/content/projects/assure-guard.mdx","bm-limo":"/src/content/projects/bm-limo.mdx","m-fest":"/src/content/projects/m-fest.mdx","proper-management":"/src/content/projects/proper-management.mdx"}},"biography":{"type":"content","entries":{"bio-events":"/src/content/biography/bio-events.mdx"}}};
 
-const collectionNames = new Set(Object.keys(lookupMap));
+new Set(Object.keys(lookupMap));
 
 function createGlobLookup(glob) {
 	return async (collection, lookupId) => {
@@ -353,7 +317,7 @@ function createGlobLookup(glob) {
 	};
 }
 
-const renderEntryGlob = /* #__PURE__ */ Object.assign({"/src/content/biography/bio-events.mdx": () => import('./bio-events_BaaKC5s4.mjs'),"/src/content/career/skills.mdx": () => import('./skills_CH4o9bp_.mjs'),"/src/content/projects/assure-guard.mdx": () => import('./assure-guard_BbQJAEq9.mjs'),"/src/content/projects/bm-limo.mdx": () => import('./bm-limo_BDUWOzrh.mjs'),"/src/content/projects/m-fest.mdx": () => import('./m-fest_BEHd4qEr.mjs'),"/src/content/projects/proper-management.mdx": () => import('./proper-management_BwuTFHJv.mjs')});
+const renderEntryGlob = /* #__PURE__ */ Object.assign({"/src/content/biography/bio-events.mdx": () => import('./bio-events_DrzlFvhG.mjs'),"/src/content/career/skills.mdx": () => import('./skills_DOYjHgQP.mjs'),"/src/content/projects/assure-guard.mdx": () => import('./assure-guard_C9-Sp-55.mjs'),"/src/content/projects/bm-limo.mdx": () => import('./bm-limo_CdcfWUv8.mjs'),"/src/content/projects/m-fest.mdx": () => import('./m-fest_BodaC5Vc.mjs'),"/src/content/projects/proper-management.mdx": () => import('./proper-management_DHi91c2Z.mjs')});
 const collectionToRenderEntryMap = createCollectionToGlobResultMap({
 	globResult: renderEntryGlob,
 	contentDir,
@@ -367,10 +331,4 @@ const getCollection = createGetCollection({
 	cacheEntriesByCollection,
 });
 
-const getEntryBySlug = createGetEntryBySlug({
-	getEntryImport: createGlobLookup(contentCollectionToEntryMap),
-	getRenderEntryImport: createGlobLookup(collectionToRenderEntryMap),
-	collectionNames,
-});
-
-export { getCollection as a, getEntryBySlug as g };
+export { getCollection as g };

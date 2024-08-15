@@ -1,5 +1,5 @@
 async function getMod() {
-						return import('./bm-limo_Cc6DBTU8.mjs');
+						return import('./bm-limo_DnrrEumQ.mjs');
 					}
 					const collectedLinks = [];
 					const collectedStyles = [];

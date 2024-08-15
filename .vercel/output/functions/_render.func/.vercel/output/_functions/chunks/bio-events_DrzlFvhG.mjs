@@ -1,5 +1,5 @@
 async function getMod() {
-						return import('./proper-management_DV5DYnUZ.mjs');
+						return import('./bio-events_CpsP_E2s.mjs');
 					}
 					const collectedLinks = [];
 					const collectedStyles = [];

@@ -1,5 +1,5 @@
 async function getMod() {
-						return import('./m-fest_CDkvtdH0.mjs');
+						return import('./assure-guard_CMVGd23W.mjs');
 					}
 					const collectedLinks = [];
 					const collectedStyles = [];

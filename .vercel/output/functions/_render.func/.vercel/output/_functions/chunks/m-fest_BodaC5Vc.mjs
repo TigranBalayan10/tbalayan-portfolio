@@ -1,5 +1,5 @@
 async function getMod() {
-						return import('./bio-events_BpG8Hy-L.mjs');
+						return import('./m-fest_CreTmY9r.mjs');
 					}
 					const collectedLinks = [];
 					const collectedStyles = [];

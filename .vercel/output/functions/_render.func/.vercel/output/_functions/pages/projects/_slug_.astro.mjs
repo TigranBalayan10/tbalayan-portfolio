@@ -1,22 +1,22 @@
 /* empty css                                        */
-import { a as createComponent, r as renderTemplate, b as renderComponent, d as createAstro, m as maybeRenderHead } from '../../chunks/astro/server_DbFupAXm.mjs';
+import { a as createComponent, r as renderTemplate, b as renderComponent, d as createAstro, m as maybeRenderHead } from '../../chunks/astro/server_DPK4Zyq3.mjs';
 import 'kleur/colors';
-import { g as getEntryBySlug } from '../../chunks/_astro_content_BvvYeW8Y.mjs';
-import { $ as $$Layout } from '../../chunks/Layout_D9h5l57-.mjs';
+import { g as getCollection } from '../../chunks/_astro_content_CHnKJ8nb.mjs';
+import { $ as $$Layout } from '../../chunks/Layout_Co-kQNyo.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const $$Astro = createAstro();
+async function getStaticPaths() {
+  const projects = await getCollection("projects");
+  return projects.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry }
+  }));
+}
 const $$slug = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$slug;
-  const { slug } = Astro2.params;
-  if (typeof slug !== "string") {
-    return Astro2.redirect("/404");
-  }
-  const entry = await getEntryBySlug("projects", slug);
-  if (!entry) {
-    return Astro2.redirect("/404");
-  }
+  const { entry } = Astro2.props;
   const { Content } = await entry.render();
   return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": entry.data.title }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<div class="prose prose-lg overflow-visible p-14 mx-auto max-w-6xl mb-16"> ${renderComponent($$result2, "Content", Content, {})} </div> ` })}`;
 }, "C:/Users/tigra/Documents/My Projects/tbalayan-portfolio/src/pages/projects/[slug].astro", void 0);
@@ -28,6 +28,7 @@ const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
   default: $$slug,
   file: $$file,
+  getStaticPaths,
   url: $$url
 }, Symbol.toStringTag, { value: 'Module' }));
 
