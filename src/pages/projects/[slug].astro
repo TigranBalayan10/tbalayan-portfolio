@@ -1,16 +1,19 @@
 ---
-import { getCollection } from "astro:content";
+import { getEntryBySlug } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
-// 1. Generate a new path for every collection entry
-export async function getStaticPaths() {
-  const projects = await getCollection("projects");
-  return projects.map((entry) => ({
-    params: { slug: entry.slug },
-    props: { entry },
-  }));
+
+const { slug } = Astro.params;
+
+if (typeof slug !== "string") {
+  return Astro.redirect("/404"); // Redirect if slug is undefined or not a string
 }
-// 2. For your template, you can get the entry directly from the prop
-const { entry } = Astro.props;
+
+const entry = await getEntryBySlug("projects", slug);
+
+if (!entry) {
+  return Astro.redirect("/404"); // Redirect if entry is not found
+}
+
 const { Content } = await entry.render();
 ---
 
