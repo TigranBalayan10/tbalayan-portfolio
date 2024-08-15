@@ -3,12 +3,12 @@
   "type": "module",
   "version": "0.0.1",
   "engines": {
-    "node": "20.x"
+    "node": ">=20.x"
   },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "rimraf dist && astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -27,6 +27,7 @@
     "@iconify-json/skill-icons": "^1.1.9",
     "@tailwindcss/typography": "^0.5.13",
     "astro-icon": "^1.1.0",
-    "daisyui": "^4.12.10"
+    "daisyui": "^4.12.10",
+    "rimraf": "^6.0.1"
   }
 }

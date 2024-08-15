@@ -304,7 +304,7 @@ createCollectionToGlobResultMap({
 });
 
 let lookupMap = {};
-lookupMap = {"career":{"type":"content","entries":{"skills":"/src/content/career/skills.mdx"}},"projects":{"type":"content","entries":{"assure-guard":"/src/content/projects/assure-guard.mdx","bm-limo":"/src/content/projects/bm-limo.mdx","m-fest":"/src/content/projects/m-fest.mdx","proper-management":"/src/content/projects/proper-management.mdx"}},"biography":{"type":"content","entries":{"bio-events":"/src/content/biography/bio-events.mdx"}}};
+lookupMap = {"career":{"type":"content","entries":{"skills":"/src/content/career/skills.mdx"}},"biography":{"type":"content","entries":{"bio-events":"/src/content/biography/bio-events.mdx"}},"projects":{"type":"content","entries":{"assure-guard":"/src/content/projects/assure-guard.mdx","m-fest":"/src/content/projects/m-fest.mdx","bm-limo":"/src/content/projects/bm-limo.mdx","proper-management":"/src/content/projects/proper-management.mdx"}}};
 
 new Set(Object.keys(lookupMap));
 
