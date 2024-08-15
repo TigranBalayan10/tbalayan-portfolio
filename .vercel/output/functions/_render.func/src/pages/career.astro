@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CareerCard from "../components/CareerCard.astro";
+import SkillCard from "../components/SkillCard.astro";
+import ExperienceCard from "../components/ExperienceCard.astro";
+import EducationCard from "../components/EducationCard.astro";
+import FavoritesCard from "../components/FavoritesCard.astro";
+import { getCollection } from "astro:content";
+
+const skillSet = await getCollection("career");
+
+const skills = skillSet.flatMap((entry) => entry.data.skills);
+
+---
+
+<Layout title="Career">
+  <div class="container mx-auto space-y-4">
+    <CareerCard />
+    <SkillCard skills={skills} />
+    <ExperienceCard />
+    <EducationCard />
+    <FavoritesCard />
+  </div>
+</Layout>
